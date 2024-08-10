@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conta_Bancaria.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +66,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +80,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nubank-logo-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nubank-logo-branco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2023_Itaú_Unibanco_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saque.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deposito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saque1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deposito1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sair %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
