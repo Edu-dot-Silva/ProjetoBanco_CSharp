@@ -43,7 +43,7 @@ namespace ProjetoBanco
 
         private void btn_saque_Click(object sender, EventArgs e)
         {
-            if(txt_agencia.TextLength == 4 && txt_nconta.TextLength == 5 && txt_tituloConta.TextLength >=3 && txt_valor.Text != "")
+            if(txt_agencia.TextLength == 4 && txt_nconta.TextLength == 5 && txt_tituloConta.TextLength >=3 && txt_valor.Text != "" )
             {
                 conta.agencia = int.Parse(txt_agencia.Text);
                 conta.numero_conta = int.Parse(txt_nconta.Text);
@@ -112,7 +112,7 @@ namespace ProjetoBanco
             {
                 if (txt_tituloConta.TextLength >= 3)
                 {
-                    txt_valor.Focus();
+                    txt_idade.Focus();
                 }
                 else
                 {
