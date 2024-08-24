@@ -50,7 +50,7 @@ namespace ProjetoBanco
             this.lbl_idade = new System.Windows.Forms.Label();
             this.txt_idade = new System.Windows.Forms.TextBox();
             this.lbl_mesNascimento = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_nascimento = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbl_agencia
@@ -270,6 +270,8 @@ namespace ProjetoBanco
             this.txt_idade.Size = new System.Drawing.Size(52, 22);
             this.txt_idade.TabIndex = 18;
             this.txt_idade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_idade.TextChanged += new System.EventHandler(this.txt_idade_TextChanged);
+            this.txt_idade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_idade_KeyPress);
             // 
             // lbl_mesNascimento
             // 
@@ -281,14 +283,15 @@ namespace ProjetoBanco
             this.lbl_mesNascimento.Text = "Mês de Nascimento";
             this.lbl_mesNascimento.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox1
+            // txt_nascimento
             // 
-            this.textBox1.Location = new System.Drawing.Point(571, 386);
-            this.textBox1.MaxLength = 2;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(56, 22);
-            this.textBox1.TabIndex = 20;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_nascimento.Location = new System.Drawing.Point(571, 386);
+            this.txt_nascimento.MaxLength = 2;
+            this.txt_nascimento.Name = "txt_nascimento";
+            this.txt_nascimento.Size = new System.Drawing.Size(56, 22);
+            this.txt_nascimento.TabIndex = 20;
+            this.txt_nascimento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            
             // 
             // frm_banco
             // 
@@ -297,7 +300,7 @@ namespace ProjetoBanco
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1090, 839);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_nascimento);
             this.Controls.Add(this.lbl_mesNascimento);
             this.Controls.Add(this.txt_idade);
             this.Controls.Add(this.lbl_idade);
@@ -352,7 +355,7 @@ namespace ProjetoBanco
         private System.Windows.Forms.Label lbl_idade;
         private System.Windows.Forms.TextBox txt_idade;
         private System.Windows.Forms.Label lbl_mesNascimento;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_nascimento;
     }
 }
 
