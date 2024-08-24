@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProjetoBanco
 {
@@ -14,11 +15,32 @@ namespace ProjetoBanco
 
         public void Sacar()
         {
-            saldo = saldo - valor;
+            if (saldo >= valor) {
+                saldo = saldo - valor;
+                MessageBox.Show($"Saque de R${valor} foi efetivado com sucesso!", "Aviso");
+                
+
+            }
+            else
+            {
+                DialogResult
+                resultado = MessageBox.Show($"Saldo insuficiente! apenas {saldo}," + $"podera ser retirado,deseja continuar?","Aviso",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+
+                if(resultado == DialogResult.Yes)
+                {
+                    saldo = 0;
+                }
+                else
+                {
+                    MessageBox.Show("Operação Cancelada.O saldo permanece inalterado", "Aviso");
+                }
+            }
         }
         public void Depositar()
         {
-            saldo = saldo + valor;
+            saldo = saldo += valor;
+
+            MessageBox.Show($"O deposito {valor} foi efetivado com sucesso!","Aviso");
         }
     }
 }
